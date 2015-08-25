@@ -1,0 +1,20 @@
+CREATE DATABASE websystique;
+USE websystique
+
+
+
+mvn spring-boot:run
+
+localhost:8080/search?query=pizza&searchRestaurants=true
+
+localhost:8080/restaurant?start=D&page=1&show=2
+
+https://www.youtube.com/watch?v=c2hxwixFrko
+
+
+https://www.youtube.com/watch?v=rdYQOqxq9F0
+
+https://www.youtube.com/watch?v=rdYQOqxq9F0
+
+
+https://github.com/sybaway/Java-EE--Developper-une-application-avec-Spring-et-Hibernate.git
