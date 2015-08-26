@@ -1,0 +1,25 @@
+CREATE DATABASE rahohealthy;
+USE rahohealthy
+
+CREATE TABLE Productdetails (
+product_id INTEGER UNSIGNED NOT Null AUTO_INCREMENT PRIMARY KEY,
+product_categoryid INTEGER,
+product_subcategoryid INTEGER,
+product_name VARCHAR(100) NOT NULL,
+product_price INTEGER NOT NULL,
+prodcut_qty VARCHAR(100) NOT NULL,
+product_desc VARCHAR(500) NOT NULL,
+merchant_id INTEGER,
+brand_name VARCHAR(100)
+
+)
+
+
+INSERT INTO Productdetails (product_categoryid, product_subcategoryid, product_name , product_price , prodcut_qty , product_desc,merchant_id,brand_name)
+VALUES ('1','1','productname','100' , '100 gm' , 'vimal testing the Decs Section','1','Peetanjali');
+
+INSERT INTO Productdetails (product_categoryid, product_subcategoryid, product_name , product_price , prodcut_qty , product_desc,merchant_id,brand_name)
+VALUES ('1','1','Alovera Juice','200' , '1 L' , 'Baba Ramdev Juice','1','Peetanjali');
+
+INSERT INTO Productdetails (product_categoryid, product_subcategoryid, product_name , product_price , prodcut_qty , product_desc,merchant_id,brand_name)
+VALUES ('1','2','Shampoo','200' , '1 L' , 'Baba Ramdev Shampoo','1','Peetanjali');
