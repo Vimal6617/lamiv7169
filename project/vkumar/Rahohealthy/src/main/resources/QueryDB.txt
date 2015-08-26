@@ -23,3 +23,16 @@ VALUES ('1','1','Alovera Juice','200' , '1 L' , 'Baba Ramdev Juice','1','Peetanj
 
 INSERT INTO Productdetails (product_categoryid, product_subcategoryid, product_name , product_price , prodcut_qty , product_desc,merchant_id,brand_name)
 VALUES ('1','2','Shampoo','200' , '1 L' , 'Baba Ramdev Shampoo','1','Peetanjali');
+
+
+
+
+http://localhost:8080/Rahohealthy/
+
+
+git clone https://github.com/Vimal6617/lamiv7169.git
+ssh-keygen -t rsa -b 4096 -C "vimal9204@gmail.com"
+git config --global user.name "Vimal_lappy_office";
+git config --global user.email vimal9204@gmail
+
+vimal6617   Lamiv1991
