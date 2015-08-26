@@ -25,7 +25,8 @@ INSERT INTO Productdetails (product_categoryid, product_subcategoryid, product_n
 VALUES ('1','2','Shampoo','200' , '1 L' , 'Baba Ramdev Shampoo','1','Peetanjali');
 
 
-
+git pull
+git gui
 
 http://localhost:8080/Rahohealthy/
 
