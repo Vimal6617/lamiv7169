@@ -14,9 +14,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.rahohealthy.dao.MerchantdetailsDao;
-import com.rahohealthy.model.MerchantStatus;
+import com.rahohealthy.model.Merchant_Status;
 import com.rahohealthy.model.Merchantdetails;
-import com.rahohealthy.model.MerchantRole;
+import com.rahohealthy.model.Merchant_Role;
 import com.rahohealthy.model.Productdetails;
 import com.rahohealthy.service.MerchantdetailsService;
 

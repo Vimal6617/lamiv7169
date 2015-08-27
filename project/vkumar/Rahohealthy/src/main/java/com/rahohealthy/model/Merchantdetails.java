@@ -1,6 +1,8 @@
 package com.rahohealthy.model;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,9 +39,11 @@ public class Merchantdetails {
 	@JoinTable(name="MerchantDetailsAndRoles",
 			joinColumns=@JoinColumn(name="merchant_id"),
 			inverseJoinColumns=@JoinColumn(name="role_id"))
-	private List<MerchantRole> merchant_role;
+	private Set<Merchant_Role> merchant_role =  new HashSet<Merchant_Role>();
+	
+	
 	@Enumerated(EnumType.STRING)
-	private MerchantStatus merchant_status;
+	private String merchant_status = Merchant_Status.ACTIVE.getMerchantStatus();
 	
 	public Merchantdetails(){}
 	
@@ -94,18 +98,21 @@ public class Merchantdetails {
 	public void setmerchant_password(String merchant_password) {
 		this.merchant_password = merchant_password;
 	}
-	public List<MerchantRole> getMerchantRole() {
+	public String getMerchantstatus() {
+		return merchant_status;
+		}
+
+	public void setMerchantstatus(String merchant_status) {
+		this.merchant_status = merchant_status;
+	}
+
+	public Set<Merchant_Role> getMerchant_Role() {
 		return merchant_role;
 	}
 
-	public void setMerchantRole(List<MerchantRole> merchant_role) {
+	public void setMerchant_Role(Set<Merchant_Role> merchant_role) {
 		this.merchant_role = merchant_role;
 	}
-	public MerchantStatus getMerchant_status() {
-		return merchant_status;
-	}
-
-	public void setMerchant_status(MerchantStatus merchant_status) {
-		this.merchant_status = merchant_status;
-	}
+	
+	
 }

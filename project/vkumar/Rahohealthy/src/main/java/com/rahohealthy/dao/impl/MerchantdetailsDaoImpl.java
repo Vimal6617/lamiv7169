@@ -20,7 +20,9 @@ public class MerchantdetailsDaoImpl implements MerchantdetailsDao{
 	
 	@Override
 	public Merchantdetails findUser(int merchant_id) {
-		return (Merchantdetails) session.getCurrentSession().get(Merchantdetails.class, merchant_id);
+		Criteria criteria = session.getCurrentSession().createCriteria(Merchantdetails.class);
+		criteria.add(Restrictions.eq("merchant_id", merchant_id));		
+		return (Merchantdetails) criteria.uniqueResult();
 	}
 	
 	@Override
