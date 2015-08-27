@@ -31,7 +31,7 @@ git gui
 http://localhost:8080/Rahohealthy/
 
 
-git clone https://github.com/Vimal6617/lamiv7169.git
+
 ssh-keygen -t rsa -b 4096 -C "vimal9204@gmail.com"
 git config --global user.name "Vimal_lappy_office";
 git config --global user.email vimal9204@gmail
