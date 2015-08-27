@@ -15,7 +15,7 @@ public class Merchant_Role {
 	private int id;	
 
 	@Column(name="TYPE", length=15, unique=true, nullable=false)
-	private String type = Merchant_RoleType.USER.getUserProfileType();
+	private String type = Merchant_RoleType.Merchant.getMerchant_RoleType();
 	
 	public int getId() {
 		return id;
