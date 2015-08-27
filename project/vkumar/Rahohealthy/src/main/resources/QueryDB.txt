@@ -31,6 +31,7 @@ git gui
 http://localhost:8080/Rahohealthy/
 
 git checkout -b merchant_login
+git checkout merchant_login
 
 ssh-keygen -t rsa -b 4096 -C "vimal9204@gmail.com"
 git config --global user.name "Vimal_lappy_office";

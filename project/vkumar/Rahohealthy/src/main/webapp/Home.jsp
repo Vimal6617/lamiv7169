@@ -15,6 +15,8 @@
 		<div><a href="searchresult.html">Search</a></div>
 		<br>
 		<div><a href="vimal.html">vimal</a></div>
+		<br>
+		<div><a href="merchantlogin.html">merchant Login</a></div>
 		<h3>
 	</div>
 </body>
