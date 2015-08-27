@@ -15,6 +15,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+
+
 @Entity
 public class Merchantdetails {
 	
@@ -39,15 +41,15 @@ public class Merchantdetails {
 	@JoinTable(name="MerchantDetailsAndRoles",
 			joinColumns=@JoinColumn(name="merchant_id"),
 			inverseJoinColumns=@JoinColumn(name="role_id"))
-	private Set<Merchant_Role> merchant_role =  new HashSet<Merchant_Role>();
-	
+	private List<Merchant_Role> merchant_role;
 	
 	@Enumerated(EnumType.STRING)
-	private String merchant_status = Merchant_Status.ACTIVE.getMerchantStatus();
+	private Merchant_Status merchant_status;
 	
 	public Merchantdetails(){}
 	
-	public Merchantdetails(int merchant_id,String merchant_email, String merchant_firstname,String merchant_lastname, String merchant_address1,String merchant_password,String merhcnat_usertype)
+	public Merchantdetails(int merchant_id,String merchant_email, String merchant_firstname,String merchant_lastname,
+			String merchant_address1,String merchant_password,List<Merchant_Role> merchant_role, Merchant_Status merchant_status)
 	{
 		super();
 		this.merchant_id = merchant_id;
@@ -98,19 +100,19 @@ public class Merchantdetails {
 	public void setmerchant_password(String merchant_password) {
 		this.merchant_password = merchant_password;
 	}
-	public String getMerchantstatus() {
+	public Merchant_Status getMerchantstatus() {
 		return merchant_status;
 		}
 
-	public void setMerchantstatus(String merchant_status) {
+	public void setMerchantstatus(Merchant_Status merchant_status) {
 		this.merchant_status = merchant_status;
 	}
 
-	public Set<Merchant_Role> getMerchant_Role() {
+	public List<Merchant_Role> getMerchant_Role() {
 		return merchant_role;
 	}
 
-	public void setMerchant_Role(Set<Merchant_Role> merchant_role) {
+	public void setMerchant_Role(List<Merchant_Role> merchant_role) {
 		this.merchant_role = merchant_role;
 	}
 	
