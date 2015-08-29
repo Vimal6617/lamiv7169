@@ -18,11 +18,15 @@
 <br />
 
 
+
+
+
+
 <sec:authorize access="hasRole('MERCHANT')">
-<div>ADMIn</div>
+<div>MERCHANT</div>
 </sec:authorize>
 
-<div>${merchantdetails.merchant_email}</div>
+
 
 <a href="logout"><spring:message code="merchantdetails.logout"/></a>
 </br>
