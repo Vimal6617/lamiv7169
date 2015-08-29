@@ -23,7 +23,7 @@ public class ProductdetailsController {
 	
 	@Autowired
 	private ProductdetailsService productService;
-	
+	/*
 	@RequestMapping({"/index", "/"})
 	public String setupForm(Map<String, Object> map){
 		Productdetails productdetails = new Productdetails();
@@ -32,13 +32,14 @@ public class ProductdetailsController {
 		
 		return "productdetails";
 	}
+	*/
+	
 	
 	@RequestMapping(value ="/searchresult")
 	public String getResult(Model model)
 	{	 
 		model.addAttribute("searchresult", new Productdetails());
 		model.addAttribute("resutlist", this.productService.getAllProductdetails());
-		
 		return "searchresult";
 	}
 	
@@ -49,8 +50,5 @@ public class ProductdetailsController {
 		return new ModelAndView("vimal", "a" , a);
 	}
 	
-	@RequestMapping("/login")
-	public String doLogin(){
-		return "login";
-	}
+	
 }
