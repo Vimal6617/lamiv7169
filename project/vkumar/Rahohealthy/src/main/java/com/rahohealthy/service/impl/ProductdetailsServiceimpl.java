@@ -24,6 +24,7 @@ public class ProductdetailsServiceimpl implements ProductdetailsService {
 
 	@Transactional
 	public List getAllProductdetails(){
+		
 		return ProductdetailsDao.getAllProductdetails();
 	}
 

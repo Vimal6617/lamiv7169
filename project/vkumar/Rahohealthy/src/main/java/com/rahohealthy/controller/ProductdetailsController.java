@@ -13,15 +13,27 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.Model;
 
 
-
 import com.rahohealthy.model.Productdetails;
 import com.rahohealthy.service.ProductdetailsService;
+import com.rahohealthy.model.Merchantdetails;
+import com.rahohealthy.service.impl.*;
 
 @Controller
 public class ProductdetailsController {
 	
 	@Autowired
 	private ProductdetailsService productService;
+	/*
+	@RequestMapping({"/index", "/"})
+	public String setupForm(Map<String, Object> map){
+		Productdetails productdetails = new Productdetails();
+		map.put("productdetails", productdetails);
+		map.put("resutlist", productService.getAllProductdetails());
+		
+		return "productdetails";
+	}
+	*/
+	
 	
 	@RequestMapping(value ="/searchresult")
 	public String getResult(Model model)
@@ -38,5 +50,5 @@ public class ProductdetailsController {
 		return new ModelAndView("vimal", "a" , a);
 	}
 	
-
+	
 }

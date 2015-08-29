@@ -11,7 +11,6 @@ prodcut_qty VARCHAR(100) NOT NULL,
 product_desc VARCHAR(500) NOT NULL,
 merchant_id INTEGER,
 brand_name VARCHAR(100)
-
 )
 
 
@@ -24,13 +23,46 @@ VALUES ('1','1','Alovera Juice','200' , '1 L' , 'Baba Ramdev Juice','1','Peetanj
 INSERT INTO Productdetails (product_categoryid, product_subcategoryid, product_name , product_price , prodcut_qty , product_desc,merchant_id,brand_name)
 VALUES ('1','2','Shampoo','200' , '1 L' , 'Baba Ramdev Shampoo','1','Peetanjali');
 
+CREATE TABLE Merchant_Role (
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Merchant_roleName varchar(45) DEFAULT NULL
+  
+);
+
+INSERT INTO Merchant_Role VALUES (1,'Admin'),(2,'Merchant'),(3,'Tester'); 
+
+CREATE TABLE Merchantdetails (
+  merchant_id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  merchant_email VARCHAR(45) NOT NULL,
+  merchant_firstname VARCHAR(100) NOT NULL,
+  merchant_lastname VARCHAR(45) DEFAULT NULL,
+  merchant_address1 VARCHAR(100) NOT NULL,
+  merchant_password VARCHAR(100) NOT NULL,
+  merchant_status VARCHAR(45) NOT NULL
+
+);
+
+INSERT INTO Merchantdetails ( merchant_email, merchant_firstname , merchant_lastname , merchant_address1 , merchant_password,merchant_status)
+VALUES ('vimal9204@gmail.com','Vimal','Kumar','Dwarka' , 'e10adc3949ba59abbe56e057f20f883e' , 'ACTIVE');
+
+E10ADC3949BA59ABBE56E057F20F883E
+
+CREATE TABLE MerchantDetailsAndRoles (
+  merchant_id int(11) NOT NULL ,
+  role_id int(11) NOT NULL 
+ 
+);
+
+INSERT INTO MerchantDetailsAndRoles VALUES (1,1),(1,2),(1,3),(2,2),(3,2),(3,3);
+
 
 git pull
 git gui
 
 http://localhost:8080/Rahohealthy/
 
-
+git checkout -b merchant_login
+git checkout merchant_login
 
 ssh-keygen -t rsa -b 4096 -C "vimal9204@gmail.com"
 git config --global user.name "Vimal_lappy_office";
