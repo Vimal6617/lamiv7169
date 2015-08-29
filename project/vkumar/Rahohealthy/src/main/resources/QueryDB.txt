@@ -46,6 +46,8 @@ CREATE TABLE Merchantdetails (
 INSERT INTO Merchantdetails ( merchant_email, merchant_firstname , merchant_lastname , merchant_address1 , merchant_password,merchant_status)
 VALUES ('vimal9204@gmail.com','Vimal','Kumar','Dwarka' , 'e10adc3949ba59abbe56e057f20f883e' , 'ACTIVE');
 
+E10ADC3949BA59ABBE56E057F20F883E
+
 CREATE TABLE MerchantDetailsAndRoles (
   merchant_id int(11) NOT NULL ,
   role_id int(11) NOT NULL 

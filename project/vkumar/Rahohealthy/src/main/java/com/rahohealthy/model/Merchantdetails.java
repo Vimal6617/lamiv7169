@@ -1,8 +1,8 @@
 package com.rahohealthy.model;
 
-import java.util.HashSet;
+import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ import javax.persistence.ManyToMany;
 
 
 @Entity
-public class Merchantdetails {
+public class Merchantdetails implements Serializable{
 	
 	
 	@Id
@@ -48,8 +48,9 @@ public class Merchantdetails {
 	
 	public Merchantdetails(){}
 	
-	public Merchantdetails(int merchant_id,String merchant_email, String merchant_firstname,String merchant_lastname,
-			String merchant_address1,String merchant_password,List<Merchant_Role> merchant_role, Merchant_Status merchant_status)
+	public Merchantdetails(int merchant_id,String merchant_email, String merchant_firstname,
+			String merchant_lastname, String merchant_address1,String merchant_password,
+			List<Merchant_Role> merchant_role, Merchant_Status merchant_status)
 	{
 		super();
 		this.merchant_id = merchant_id;

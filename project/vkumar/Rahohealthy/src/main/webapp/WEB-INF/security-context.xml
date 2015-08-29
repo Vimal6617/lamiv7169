@@ -7,11 +7,12 @@
                     http://www.springframework.org/schema/security/spring-security-3.1.xsd">
     
     <!-- We will be defining all security related configurations in this file -->
+    <http pattern="/" security="none"/>
     <http pattern="/login" security="none"/>
     
     <http use-expressions="true">
         <intercept-url pattern="/login" access="isAuthenticated()"/> <!-- this means all URL in this app will be checked if user is authenticated -->
-        <form-login login-page="/login" default-target-url="/index" authentication-failure-url="/login"/>
+        <form-login login-page="/login" default-target-url="/vimal" authentication-failure-url="/login"/>
         <logout logout-url="/logout" logout-success-url="/index"/> <!-- the logout url we will use in JSP -->
     </http>
     <!-- 
@@ -40,7 +41,7 @@
 	
 	<authentication-manager>
 	    <authentication-provider user-service-ref="userDetailsService">
-	        <password-encoder hash="md5"></password-encoder>
+	       <!-- <password-encoder hash="md5"></password-encoder> -->
 	    </authentication-provider>
 	</authentication-manager>
 </beans:beans>

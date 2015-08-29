@@ -20,7 +20,7 @@ public class Merchant_Role {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String Merchant_roleName;
-	@ManyToMany(mappedBy = "roles")
+	@ManyToMany(mappedBy = "merchant_role")
 	private List<Merchantdetails> merchant_details;
 	
 	public Merchant_Role(){}

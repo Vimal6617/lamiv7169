@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
+
 import com.rahohealthy.dao.MerchantdetailsDao;
 import com.rahohealthy.model.Merchant_Status;
 import com.rahohealthy.model.Merchantdetails;
@@ -28,10 +29,12 @@ public class MerchantdetailsServiceImpl implements UserDetailsService{
 	@Autowired
 	private MerchantdetailsDao merchantdetailsdao;
 	
+	@Override
 	@Transactional(readOnly = true)
-	public UserDetails loadUserByUsername(String merchant_email)
+	public UserDetails loadUserByUsername(String merchant_firstname)
 			throws UsernameNotFoundException {
-		Merchantdetails merchantdetails = merchantdetailsdao.findUserByEmail(merchant_email); //our own User model class
+		System.out.println("#######################" + merchantdetailsdao.findUserByName(merchant_firstname));
+		Merchantdetails merchantdetails = merchantdetailsdao.findUserByName(merchant_firstname); //our own User model class
 		
 		if(merchantdetails!=null){
 			String password = merchantdetails.getmerchant_password();
@@ -49,7 +52,7 @@ public class MerchantdetailsServiceImpl implements UserDetailsService{
 			
 			//Now let's create Spring Security User object
 			org.springframework.security.core.userdetails.User securityUser = new 
-					org.springframework.security.core.userdetails.User(merchant_email, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
+					org.springframework.security.core.userdetails.User(merchant_firstname, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
 			return securityUser;
 		}else{
 			throw new UsernameNotFoundException("User Not Found!!!");

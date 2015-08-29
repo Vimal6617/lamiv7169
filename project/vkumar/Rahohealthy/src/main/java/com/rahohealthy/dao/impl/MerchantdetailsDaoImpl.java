@@ -8,6 +8,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+
 import com.rahohealthy.dao.MerchantdetailsDao;
 import com.rahohealthy.model.Merchantdetails;
 
@@ -29,6 +30,13 @@ public class MerchantdetailsDaoImpl implements MerchantdetailsDao{
 	public Merchantdetails findUserByEmail(String merchant_email) {
 		Criteria criteria = session.getCurrentSession().createCriteria(Merchantdetails.class);
 		criteria.add(Restrictions.eq("merchant_email", merchant_email));		
+		return (Merchantdetails) criteria.uniqueResult();
+	}
+	
+	@Override
+	public Merchantdetails findUserByName(String merchant_firstname) {
+		Criteria criteria = session.getCurrentSession().createCriteria(Merchantdetails.class);
+		criteria.add(Restrictions.eq("merchant_firstname", merchant_firstname));		
 		return (Merchantdetails) criteria.uniqueResult();
 	}
 	
