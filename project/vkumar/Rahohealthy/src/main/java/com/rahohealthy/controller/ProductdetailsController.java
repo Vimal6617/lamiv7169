@@ -14,8 +14,11 @@ import org.springframework.ui.Model;
 
 
 
+
 import com.rahohealthy.model.Productdetails;
 import com.rahohealthy.service.ProductdetailsService;
+import com.rahohealthy.model.Merchantdetails;
+import com.rahohealthy.service.impl.*;
 
 @Controller
 public class ProductdetailsController {
@@ -38,5 +41,8 @@ public class ProductdetailsController {
 		return new ModelAndView("vimal", "a" , a);
 	}
 	
-
+	@RequestMapping("/login")
+	public String doLogin(){
+		return "login";
+	}
 }

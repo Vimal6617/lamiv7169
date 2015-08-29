@@ -22,13 +22,12 @@ import com.rahohealthy.model.Productdetails;
 
 
 
-@Service("MerchantdetailsService")
+@Service("userDetailsService")
 public class MerchantdetailsServiceImpl implements UserDetailsService{
 
 	@Autowired
 	private MerchantdetailsDao merchantdetailsdao;
 	
-	@Override
 	@Transactional(readOnly = true)
 	public UserDetails loadUserByUsername(String merchant_email)
 			throws UsernameNotFoundException {
