@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.Model;
 
 
+
 import com.rahohealthy.model.Productdetails;
 import com.rahohealthy.service.ProductdetailsService;
 import com.rahohealthy.model.Merchantdetails;
@@ -50,5 +51,18 @@ public class ProductdetailsController {
 		return new ModelAndView("vimal", "a" , a);
 	}
 	
+	
+	@RequestMapping("/login")
+	public String doLogin(){
+		return "login";
+
+	}
+	
+	@RequestMapping("/merchantloggedIN")
+	public ModelAndView saydhi(){
+		
+		String a = "<br><div style='text-aign:center;'>"  + "<h1>***********hi VImal ";
+		return new ModelAndView("merchantloggedIN", "a" , a);
+	}
 	
 }
