@@ -31,6 +31,7 @@ CREATE TABLE Merchant_Role (
 
 INSERT INTO Merchant_Role VALUES (1,'Admin'),(2,'Merchant'),(3,'Tester'); 
 
+
 CREATE TABLE Merchantdetails (
   merchant_id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   merchant_email VARCHAR(45) NOT NULL,
@@ -43,7 +44,7 @@ CREATE TABLE Merchantdetails (
 );
 
 INSERT INTO Merchantdetails ( merchant_email, merchant_firstname , merchant_lastname , merchant_address1 , merchant_password,merchant_status)
-VALUES ('vimal9204@gmail.com','Vimal','Kumar','Dwarka' , 'e10adc3949ba59abbe56e057f20f883e' , 'ACTIVE');
+VALUES ('vimal9204@gmail.com','Vimal','Kumar','Dwarka' , '123456' , 'ACTIVE');
 
 E10ADC3949BA59ABBE56E057F20F883E
 
