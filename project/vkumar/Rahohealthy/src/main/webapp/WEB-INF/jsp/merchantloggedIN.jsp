@@ -22,15 +22,36 @@
 
 
 
-<sec:authorize access="hasRole('MERCHANT')">
-<div>MERCHANT</div>
+<sec:authorize access="hasRole('Admin')">
+<div>WELCOME ADMIN</div>
 </sec:authorize>
 
-
+<table border="1">
+	
+	<th>merchant_id</th>
+	<th>merchant_email</th>
+	<th>merchant_firstname</th>
+	<th>merchant_lastname</th>
+	<th>merchant_address1</th>
+	
+	
+	
+	<c:forEach items="${Merchantlist}" var="result">
+		<tr>
+			<td>${result.merchant_id}</td>
+			<td>${result.merchant_email}</td>
+			<td>${result.merchant_firstname}</td>
+			<td>${result.merchant_lastname}</td>
+			<td>${result.merchant_address1}</td>
+			
+						
+		</tr>
+	</c:forEach>
+</table>
 
 <a href="logout"><spring:message code="merchantdetails.logout"/></a>
 </br>
-<h2>HIiiiiiiiiiiiiiii</h2>
+
 
 </br>
 <div><a href="vimal.html">vimal</a></div>
