@@ -24,7 +24,7 @@ import com.rahohealthy.model.Productdetails;
 
 
 @Service("userDetailsService")
-public class MerchantLoginServiceimpl implements UserDetailsService{
+public class MerchantdetailsServiceImpl implements UserDetailsService{
 
 	@Autowired
 	private MerchantdetailsDao merchantdetailsdao;

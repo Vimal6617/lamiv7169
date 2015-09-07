@@ -14,20 +14,16 @@ import org.springframework.ui.Model;
 
 
 
-
 import com.rahohealthy.model.Productdetails;
-import com.rahohealthy.service.MerchantdetailsService;
 import com.rahohealthy.service.ProductdetailsService;
 import com.rahohealthy.model.Merchantdetails;
+import com.rahohealthy.service.impl.*;
 
 @Controller
 public class ProductdetailsController {
 	
 	@Autowired
 	private ProductdetailsService productService;
-	@Autowired
-	private MerchantdetailsService merchantService;
-	
 	/*
 	@RequestMapping({"/index", "/"})
 	public String setupForm(Map<String, Object> map){
@@ -63,11 +59,10 @@ public class ProductdetailsController {
 	}
 	
 	@RequestMapping("/merchantloggedIN")
-	public String getMerchantResult(Model model)
-	{	 
-		model.addAttribute("merchantloggedIN", new Merchantdetails());
-		model.addAttribute("Merchantlist", this.merchantService.getAllMerchantdetails());
-		return "merchantloggedIN";
+	public ModelAndView saydhi(){
+		
+		String a = "<br><div style='text-aign:center;'>"  + "<h1>***********hi VImal ";
+		return new ModelAndView("merchantloggedIN", "a" , a);
 	}
 	
 }
