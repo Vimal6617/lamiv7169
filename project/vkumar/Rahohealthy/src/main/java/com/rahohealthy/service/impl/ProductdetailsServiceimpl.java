@@ -21,6 +21,11 @@ public class ProductdetailsServiceimpl implements ProductdetailsService {
 	public Productdetails getProductdetails(int product_id) {
 		return ProductdetailsDao.getProductdetails(product_id );
 	}
+	
+	@Transactional
+	public void  addproduct(Productdetails productdetails){
+		ProductdetailsDao.addproduct(productdetails);
+	}
 
 	@Transactional
 	public List getAllProductdetails(){

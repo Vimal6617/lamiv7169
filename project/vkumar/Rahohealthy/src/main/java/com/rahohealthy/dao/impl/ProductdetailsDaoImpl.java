@@ -22,6 +22,10 @@ public class ProductdetailsDaoImpl implements ProductdetailsDao {
 	}
 
 	@Override
+	public void addproduct(Productdetails productdetails) {
+		session.getCurrentSession().save(productdetails);
+	}
+	@Override
 	public List getAllProductdetails() {
 		
 		return session.getCurrentSession().createQuery("from Productdetails").list();

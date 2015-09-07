@@ -35,6 +35,44 @@ public class ProductdetailsController {
 	}
 	*/
 	
+	@RequestMapping(value = { "/addproduct" }, method = RequestMethod.GET)
+	public String addproduct(Map<String, Object> map) {
+		Productdetails productdetails = new Productdetails();
+		map.put("productdetails", productdetails);
+		map.put("resutlist", productService.getAllProductdetails());
+		return "addproduct";
+	}
+	
+	
+	
+	@RequestMapping(value="/addproduct", method=RequestMethod.POST)
+	public String doActions(@ModelAttribute Productdetails productdetails, BindingResult result,
+			@RequestParam String action, Map<String, Object> map){
+		Productdetails productResult = new Productdetails();
+		switch(action.toLowerCase()){	//only in Java7 you can put String in switch
+		case "add":
+			productService.addproduct(productdetails);
+			productResult = productdetails;
+			break;
+			/*
+		case "edit":
+			studentService.edit(student);
+			studentResult = student;
+			break;
+		case "delete":
+			studentService.delete(student.getStudentId());
+			studentResult = new Productdetails();
+			break;
+		case "search":
+			Productdetails searchedStudent = studentService.getStudent(student.getStudentId());
+			studentResult = searchedStudent!=null ? searchedStudent : new Productdetails();
+			break;
+			*/
+		}
+		map.put("addproduct", productResult);
+		map.put("resultList", productService.getAllProductdetails());
+		return "addproduct";
+	}
 	
 	@RequestMapping(value ="/searchresult")
 	public String getResult(Model model)
