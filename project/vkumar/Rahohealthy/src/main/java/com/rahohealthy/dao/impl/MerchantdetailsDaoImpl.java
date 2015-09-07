@@ -42,7 +42,8 @@ public class MerchantdetailsDaoImpl implements MerchantdetailsDao{
 	
 	@Override
 	public List<Merchantdetails> getAllMerchantdetails() {
-		return session.getCurrentSession().createQuery("from merchantdetails").list();
+		
+		return session.getCurrentSession().createQuery("from Merchantdetails").list();
 	}
 
 	
