@@ -55,9 +55,6 @@
 
 </br>
 <div><a href="vimal.html">vimal</a></div>
-
-</br>
-<div><a href="addproduct.html">Add Product</a></div>
 	
 </body>
 </html>
