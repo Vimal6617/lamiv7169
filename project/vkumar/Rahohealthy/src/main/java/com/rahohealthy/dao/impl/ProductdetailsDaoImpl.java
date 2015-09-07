@@ -20,11 +20,6 @@ public class ProductdetailsDaoImpl implements ProductdetailsDao {
 	public Productdetails getProductdetails(int product_id) {
 		return (Productdetails)session.getCurrentSession().get(Productdetails.class, product_id);
 	}
-	
-	@Override
-	public void addproduct(Productdetails productdetails) {
-		session.getCurrentSession().save(productdetails);
-	}
 
 	@Override
 	public List getAllProductdetails() {

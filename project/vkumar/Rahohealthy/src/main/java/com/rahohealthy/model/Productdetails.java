@@ -101,8 +101,8 @@ public class Productdetails {
 	public String getbrand_name() {
 		return brand_name;
 	}
-	public void setbrand_name(String brand_name) {
-		this.brand_name = brand_name;
+	public String setbrand_name(String yearLevel) {
+		return brand_name;
 	}
 	
 	

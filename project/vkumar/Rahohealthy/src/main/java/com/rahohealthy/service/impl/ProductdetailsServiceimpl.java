@@ -23,10 +23,6 @@ public class ProductdetailsServiceimpl implements ProductdetailsService {
 	}
 
 	@Transactional
-	public void  addproduct(Productdetails productdetails){
-		ProductdetailsDao.addproduct(productdetails);
-	}
-	@Transactional
 	public List getAllProductdetails(){
 		
 		return ProductdetailsDao.getAllProductdetails();
